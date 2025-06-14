@@ -8,7 +8,7 @@
 
     Get up and running with CalendarioReino in minutes
 
-    [:octicons-arrow-right-24: Getting Started](getting-started/quick-start.md)
+    [:octicons-arrow-right-24: Getting Started](pt/getting-started/quick-start.md)
 
 -   :material-chart-line:{ .lg .middle } **Business Case**
 
@@ -16,7 +16,7 @@
 
     Understand the business value and ROI of the project
 
-    [:octicons-arrow-right-24: Business Justification](business-case/index.md)
+    [:octicons-arrow-right-24: Business Justification](pt/business-case/index.md)
 
 -   :material-cog:{ .lg .middle } **Technical Architecture**
 
@@ -24,7 +24,7 @@
 
     Deep dive into the system design and components
 
-    [:octicons-arrow-right-24: Architecture Overview](architecture/index.md)
+    [:octicons-arrow-right-24: Architecture Overview](pt/architecture/index.md)
 
 -   :material-account-group:{ .lg .middle } **User Guide**
 
@@ -32,7 +32,7 @@
 
     Complete user manual and troubleshooting guide
 
-    [:octicons-arrow-right-24: User Documentation](user-guide/index.md)
+    [:octicons-arrow-right-24: User Documentation](pt/user-guide/index.md)
 
 </div>
 
@@ -92,24 +92,24 @@ This documentation is organized following PRINCE2 Project Initiation Documentati
 
 === "Business Focus"
 
-    - [Project Overview](project-overview/index.md) - Executive summary and objectives
-    - [Business Case](business-case/index.md) - Justification and benefits analysis
-    - [Implementation Plan](implementation/index.md) - Phases and milestones
-    - [Risk Management](risk-management/index.md) - Risk assessment and mitigation
+    - [Project Overview](pt/project-overview/index.md) - Executive summary and objectives
+    - [Business Case](pt/business-case/index.md) - Justification and benefits analysis
+    - [Implementation Plan](pt/implementation/index.md) - Phases and milestones
+    - [Risk Management](pt/risk-management/index.md) - Risk assessment and mitigation
 
 === "Technical Focus"
 
-    - [Technical Architecture](architecture/index.md) - System design and components
-    - [API Documentation](api/index.md) - Apex controllers and LWC components
-    - [User Documentation](user-guide/index.md) - Installation and user guides
-    - [Technical Details](technical/index.md) - Code analysis and features
+    - [Technical Architecture](pt/architecture/index.md) - System design and components
+    - [API Documentation](pt/api/index.md) - Apex controllers and LWC components
+    - [User Documentation](pt/user-guide/index.md) - Installation and user guides
+    - [Technical Details](pt/technical/index.md) - Code analysis and features
 
 === "Project Management"
 
-    - [Quality Management](quality/index.md) - Standards and review processes
-    - [Project Management](project-management/index.md) - PRINCE2 processes
-    - [Change Management](project-management/change.md) - Change control procedures
-    - [Lessons Learned](project-management/lessons.md) - Project insights
+    - [Quality Management](pt/quality/index.md) - Standards and review processes
+    - [Project Overview](pt/project-overview/index.md) - Complete project information
+    - [Implementation Plan](pt/implementation/index.md) - Project phases and milestones
+    - [Risk Management](pt/risk-management/index.md) - Risk assessment strategies
 
 ### Language Support
 
@@ -124,18 +124,18 @@ Use the language selector in the header to switch between languages.
 
 !!! tip "New to the Project?"
 
-    1. Start with the [Project Charter](project-overview/charter.md) for a high-level overview
-    2. Review the [Business Case](business-case/justification.md) to understand the value proposition
-    3. Follow the [Quick Start Guide](getting-started/quick-start.md) for immediate setup
-    4. Explore the [Technical Architecture](architecture/overview.md) for implementation details
+    1. Start with the [Project Charter](pt/project-overview/charter.md) for a high-level overview
+    2. Review the [Business Case](pt/business-case/index.md) to understand the value proposition
+    3. Follow the [Quick Start Guide](pt/getting-started/quick-start.md) for immediate setup
+    4. Explore the [Technical Architecture](pt/architecture/index.md) for implementation details
 
 ### Support and Contribution
 
 !!! question "Need Help?"
 
-    - Check the [FAQ](user-guide/faq.md) for common questions
-    - Review [Troubleshooting](user-guide/troubleshooting.md) for technical issues
-    - Consult the [API Documentation](api/index.md) for integration details
+    - Check the [User Guide](pt/user-guide/index.md) for detailed information
+    - Review the [Technical Documentation](pt/technical/index.md) for technical details
+    - Consult the [API Documentation](pt/api/index.md) for integration details
 
 ---
 

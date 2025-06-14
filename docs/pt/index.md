@@ -107,9 +107,9 @@ Esta documentação está organizada seguindo os padrões da Documentação de I
 === "Gestão de Projeto"
 
     - [Gestão de Qualidade](quality/index.md) - Padrões e processos de revisão
-    - [Gestão de Projeto](project-management/index.md) - Processos PRINCE2
-    - [Gestão de Mudanças](project-management/change.md) - Procedimentos de controle de mudanças
-    - [Lições Aprendidas](project-management/lessons.md) - Insights do projeto
+    - [Visão Geral do Projeto](project-overview/index.md) - Informações completas do projeto
+    - [Plano de Implementação](implementation/index.md) - Fases e marcos do projeto
+    - [Gestão de Riscos](risk-management/index.md) - Estratégias de avaliação de riscos
 
 ### Suporte a Idiomas
 
@@ -125,16 +125,16 @@ Use o seletor de idioma no cabeçalho para alternar entre os idiomas.
 !!! tip "Novo no Projeto?"
 
     1. Comece com o [Termo de Abertura do Projeto](project-overview/charter.md) para uma visão geral de alto nível
-    2. Revise o [Caso de Negócio](business-case/justification.md) para entender a proposta de valor
+    2. Revise o [Caso de Negócio](business-case/index.md) para entender a proposta de valor
     3. Siga o [Guia de Início Rápido](getting-started/quick-start.md) para configuração imediata
-    4. Explore a [Arquitetura Técnica](architecture/overview.md) para detalhes de implementação
+    4. Explore a [Arquitetura Técnica](architecture/index.md) para detalhes de implementação
 
 ### Suporte e Contribuição
 
 !!! question "Precisa de Ajuda?"
 
-    - Consulte o [FAQ](user-guide/faq.md) para perguntas comuns
-    - Revise a [Solução de Problemas](user-guide/troubleshooting.md) para questões técnicas
+    - Consulte o [Guia do Usuário](user-guide/index.md) para informações detalhadas
+    - Revise a [Documentação Técnica](technical/index.md) para detalhes técnicos
     - Consulte a [Documentação da API](api/index.md) para detalhes de integração
 
 ---

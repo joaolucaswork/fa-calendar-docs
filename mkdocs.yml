@@ -18,7 +18,6 @@ copyright: Copyright &copy; 2025 Reino Capital
 theme:
   name: material
   language: en
-  custom_dir: overrides
   
   # Theme features
   features:
@@ -103,8 +102,7 @@ plugins:
   - git-committers:
       repository: joaolucaswork/fa-calendar-docs
       branch: main
-  - tags:
-      tags_file: tags.md
+  - tags
   - mermaid2:
       arguments:
         theme: |
@@ -124,12 +122,12 @@ extra:
       link: https://br.linkedin.com/in/gabriel-tintori-276b93105
       
   alternate:
-    - name: Português
-      link: ./
-      lang: pt
     - name: English
-      link: ./en/
+      link: ./
       lang: en
+    - name: Português
+      link: ./pt/
+      lang: pt
 
 # Extensions
 markdown_extensions:
@@ -149,8 +147,8 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -176,97 +174,36 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Início:
-    - index.md
+  # English (Default) - Root Level Files
+  - Home: index.md
+  - Getting Started: getting-started/quick-start.md
+  - Project Overview:
+    - project-overview/index.md
+    - Project Charter: project-overview/charter.md
+  - Business Case: business-case/index.md
+  - Architecture: architecture/index.md
+  - Quality Management: quality/index.md
+  - Risk Management: risk-management/index.md
+  - Technical Details:
+    - technical/index.md
+    - Features: technical/features.md
+
+  # Portuguese Section
+  - Português:
+    - Início: pt/index.md
     - Termo de Abertura: pt/project-overview/charter.md
     - Início Rápido: pt/getting-started/quick-start.md
-
-  - Visão Geral do Projeto:
-    - pt/project-overview/index.md
-    - Resumo Executivo: pt/project-overview/executive-summary.md
-    - Objetivos do Projeto: pt/project-overview/objectives.md
-    - Escopo & Entregas: pt/project-overview/scope.md
-    - Critérios de Sucesso: pt/project-overview/success-criteria.md
-    
-  - Caso de Negócio:
-    - pt/business-case/index.md
-    - Justificativa de Negócio: pt/business-case/justification.md
-    - Análise de Benefícios: pt/business-case/benefits.md
-    - Análise Custo-Benefício: pt/business-case/cost-benefit.md
-    - Avaliação de Investimento: pt/business-case/investment.md
-    - Impacto nos Negócios: pt/business-case/impact.md
-
-  - Arquitetura Técnica:
-    - pt/architecture/index.md
-    - Visão Geral do Sistema: pt/architecture/overview.md
-    - Arquitetura de Componentes: pt/architecture/components.md
-    - Pontos de Integração: pt/architecture/integration.md
-    - Dependências Externas: pt/architecture/dependencies.md
-    - Fluxo de Dados: pt/architecture/data-flow.md
-    - Arquitetura de Segurança: pt/architecture/security.md
-    
-  - Plano de Implementação:
-    - pt/implementation/index.md
-    - Fases do Projeto: pt/implementation/phases.md
-    - Marcos & Entregas: pt/implementation/milestones.md
-    - Planejamento de Recursos: pt/implementation/resources.md
-    - Cronograma: pt/implementation/timeline.md
-    - Dependências: pt/implementation/dependencies.md
-
-  - Gestão de Riscos:
-    - pt/risk-management/index.md
-    - Registro de Riscos: pt/risk-management/register.md
-    - Avaliação de Riscos: pt/risk-management/assessment.md
-    - Estratégias de Mitigação: pt/risk-management/mitigation.md
-    - Planos de Contingência: pt/risk-management/contingency.md
-    - Monitoramento de Riscos: pt/risk-management/monitoring.md
-
-  - Gestão de Qualidade:
-    - pt/quality/index.md
-    - Padrões de Qualidade: pt/quality/standards.md
-    - Processos de Revisão: pt/quality/reviews.md
-    - Critérios de Aceitação: pt/quality/acceptance.md
-    - Estratégia de Testes: pt/quality/testing.md
-    - Garantia de Qualidade: pt/quality/assurance.md
-    
-  - Documentação do Usuário:
-    - pt/user-guide/index.md
-    - Guia de Instalação: pt/user-guide/installation.md
-    - Manual do Usuário: pt/user-guide/manual.md
-    - Configuração: pt/user-guide/configuration.md
-    - Solução de Problemas: pt/user-guide/troubleshooting.md
-    - FAQ: pt/user-guide/faq.md
-
-  - Documentação da API:
-    - pt/api/index.md
-    - Controladores Apex: pt/api/apex-controllers.md
-    - Componentes LWC: pt/api/lwc-components.md
-    - APIs de Integração: pt/api/integration.md
-    - Modelos de Dados: pt/api/data-models.md
-    - Exemplos de Código: pt/api/examples.md
-
-  - Detalhes Técnicos:
-    - pt/technical/index.md
-    - Análise de Código: pt/technical/code-analysis.md
-    - Documentação de Recursos: pt/technical/features.md
-    - Gestão de Estado: pt/technical/state-management.md
-    - Bibliotecas Externas: pt/technical/libraries.md
-    - Performance: pt/technical/performance.md
-    
-  - Gestão de Projeto:
-    - pt/project-management/index.md
-    - Processos PRINCE2: pt/project-management/prince2.md
-    - Gestão de Mudanças: pt/project-management/change.md
-    - Plano de Comunicação: pt/project-management/communication.md
-    - Stakeholder Management: project-management/stakeholders.md
-    - Lições Aprendidas: pt/project-management/lessons.md
-
-  - Apêndices:
-    - pt/appendices/index.md
-    - Glossário: pt/appendices/glossary.md
-    - Referências: pt/appendices/references.md
-    - Modelos: pt/appendices/templates.md
-    - Change Log: appendices/changelog.md
+    - Visão Geral do Projeto: pt/project-overview/index.md
+    - Caso de Negócio: pt/business-case/index.md
+    - Arquitetura Técnica: pt/architecture/index.md
+    - Plano de Implementação: pt/implementation/index.md
+    - Gestão de Riscos: pt/risk-management/index.md
+    - Gestão de Qualidade: pt/quality/index.md
+    - Documentação do Usuário: pt/user-guide/index.md
+    - Documentação da API: pt/api/index.md
+    - Detalhes Técnicos: pt/technical/index.md
+    - Apêndices:
+      - Glossário: pt/appendices/glossary.md
 
 # Extra CSS and JavaScript
 extra_css:

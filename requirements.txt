@@ -1,9 +1,8 @@
 # MkDocs Material Documentation Requirements
 # Install with: pip install -r requirements.txt
 
-# Core MkDocs
-mkdocs>=1.5.0
-mkdocs-material>=9.4.0
+# Core MkDocs Material (automatically installs mkdocs, markdown, pygments, pymdown-extensions)
+mkdocs-material>=9.5.0
 
 # Essential plugins
 mkdocs-git-revision-date-localized-plugin>=1.2.0
@@ -12,17 +11,11 @@ mkdocs-minify-plugin>=0.7.0
 mkdocs-mermaid2-plugin>=1.1.0
 
 # Additional plugins for enhanced functionality
-mkdocs-tags-plugin>=0.3.0
+mkdocs-material[recommended]
 mkdocs-awesome-pages-plugin>=2.9.0
 mkdocs-redirects>=1.2.0
 mkdocs-macros-plugin>=1.0.0
 
-# Python dependencies
-Pygments>=2.16.0
-pymdown-extensions>=10.3.0
-python-markdown-math>=0.8
-markdown>=3.5.0
-
-# Optional but recommended
+# Image processing and social cards (recommended for Material features)
 pillow>=10.0.0
 cairosvg>=2.7.0

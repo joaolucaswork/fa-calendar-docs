@@ -1,5 +1,6 @@
 name: Deploy MkDocs to GitHub Pages
 
+# Updated workflow with latest action versions
 on:
   push:
     branches: [ main, master ]

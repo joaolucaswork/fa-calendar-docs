@@ -189,7 +189,9 @@ nav:
   - Technical Details:
     - technical/index.md
     - Features: technical/features.md
-  - User Guide: user-guide/index.md
+  - User Guide:
+    - user-guide/index.md
+    - Configuration: user-guide/configuration.md
   - API Documentation: api/index.md
 
   # Portuguese Section
@@ -206,11 +208,26 @@ nav:
     - Documentação do Usuário: 
       - pt/user-guide/index.md
       - Primeiros Passos: pt/user-guide/first-steps.md
+      - Instalação: pt/user-guide/installation.md
       - Interface: pt/user-guide/interface.md
       - Navegação: pt/user-guide/navigation.md
       - Gestão de Eventos: pt/user-guide/event-management.md
       - Reserva de Salas: pt/user-guide/room-booking.md
+      - Configuração de Salas: pt/user-guide/room-setup.md
       - Configuração: pt/user-guide/configuration.md
+      - Personalização: pt/user-guide/customization.md
+      - Compartilhamento: pt/user-guide/sharing.md
+      - Manual do Usuário: pt/user-guide/manual.md
+      - Gestão de Usuários: pt/user-guide/user-management.md
+      - Backup: pt/user-guide/backup.md
+      - Manutenção: pt/user-guide/maintenance.md
+      - Atualizações: pt/user-guide/updates.md
+      - Monitoramento: pt/user-guide/monitoring.md
+      - Diagnósticos: pt/user-guide/diagnostics.md
+      - Solução de Problemas: pt/user-guide/troubleshooting.md
+      - Códigos de Erro: pt/user-guide/error-codes.md
+      - Treinamento: pt/user-guide/training.md
+      - Comunidade: pt/user-guide/community.md
       - FAQ: pt/user-guide/faq.md
       - Suporte: pt/user-guide/support.md
     - Documentação da API: pt/api/index.md

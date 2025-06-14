@@ -99,15 +99,17 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       type: timeago
-  - git-committers:
-      repository: joaolucaswork/fa-calendar-docs
-      branch: main
+      enable_git_follow: false
+  # - git-committers:
+  #     repository: joaolucaswork/fa-calendar-docs
+  #     branch: main
   - tags
   - mermaid2:
       arguments:
         theme: |
           ^(JSON.parse(__md_get("__palette").index == 1)) ?
           'dark' : 'light'
+      javascript: https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js
 
 # Customization
 extra:
@@ -187,6 +189,8 @@ nav:
   - Technical Details:
     - technical/index.md
     - Features: technical/features.md
+  - User Guide: user-guide/index.md
+  - API Documentation: api/index.md
 
   # Portuguese Section
   - Português:
@@ -199,7 +203,16 @@ nav:
     - Plano de Implementação: pt/implementation/index.md
     - Gestão de Riscos: pt/risk-management/index.md
     - Gestão de Qualidade: pt/quality/index.md
-    - Documentação do Usuário: pt/user-guide/index.md
+    - Documentação do Usuário: 
+      - pt/user-guide/index.md
+      - Primeiros Passos: pt/user-guide/first-steps.md
+      - Interface: pt/user-guide/interface.md
+      - Navegação: pt/user-guide/navigation.md
+      - Gestão de Eventos: pt/user-guide/event-management.md
+      - Reserva de Salas: pt/user-guide/room-booking.md
+      - Configuração: pt/user-guide/configuration.md
+      - FAQ: pt/user-guide/faq.md
+      - Suporte: pt/user-guide/support.md
     - Documentação da API: pt/api/index.md
     - Detalhes Técnicos: pt/technical/index.md
     - Apêndices:
@@ -212,4 +225,3 @@ extra_css:
 
 extra_javascript:
   - javascripts/extra.js
-  - javascripts/mermaid.js

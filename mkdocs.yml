@@ -1,0 +1,278 @@
+# CalendarioReino Project Documentation
+# MkDocs Material Configuration with PRINCE2 Standards
+
+site_name: CalendarioReino Project Documentation
+site_description: Comprehensive project documentation for the CalendarioReino Salesforce Lightning Web Component
+site_author: Project Team
+site_url: https://github.com/joaolucaswork/fa-calendar-docs
+
+# Repository
+repo_name: fa-calendar-docs
+repo_url: https://github.com/joaolucaswork/fa-calendar-docs
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2025 Reino Capital
+
+# Configuration
+theme:
+  name: material
+  language: en
+  custom_dir: overrides
+  
+  # Theme features
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - header.autohide
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.integrate
+
+  # Color palette
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  # Fonts
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  # Icons
+  icon:
+    logo: material/calendar-clock
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+  - git-committers:
+      repository: joaolucaswork/fa-calendar-docs
+      branch: main
+  - tags:
+      tags_file: tags.md
+  - mermaid2:
+      arguments:
+        theme: |
+          ^(JSON.parse(__md_get("__palette").index == 1)) ?
+          'dark' : 'light'
+
+# Customization
+extra:
+  status:
+    new: Recently added
+    deprecated: Deprecated
+    
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/joaolucaswork/fa-calendar-docs
+    - icon: fontawesome/brands/linkedin
+      link: https://br.linkedin.com/in/gabriel-tintori-276b93105
+      
+  alternate:
+    - name: Português
+      link: ./
+      lang: pt
+    - name: English
+      link: ./en/
+      lang: en
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      title: On this page
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: joaolucaswork
+      repo: fa-calendar-docs
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - Início:
+    - index.md
+    - Termo de Abertura: pt/project-overview/charter.md
+    - Início Rápido: pt/getting-started/quick-start.md
+
+  - Visão Geral do Projeto:
+    - pt/project-overview/index.md
+    - Resumo Executivo: pt/project-overview/executive-summary.md
+    - Objetivos do Projeto: pt/project-overview/objectives.md
+    - Escopo & Entregas: pt/project-overview/scope.md
+    - Critérios de Sucesso: pt/project-overview/success-criteria.md
+    
+  - Caso de Negócio:
+    - pt/business-case/index.md
+    - Justificativa de Negócio: pt/business-case/justification.md
+    - Análise de Benefícios: pt/business-case/benefits.md
+    - Análise Custo-Benefício: pt/business-case/cost-benefit.md
+    - Avaliação de Investimento: pt/business-case/investment.md
+    - Impacto nos Negócios: pt/business-case/impact.md
+
+  - Arquitetura Técnica:
+    - pt/architecture/index.md
+    - Visão Geral do Sistema: pt/architecture/overview.md
+    - Arquitetura de Componentes: pt/architecture/components.md
+    - Pontos de Integração: pt/architecture/integration.md
+    - Dependências Externas: pt/architecture/dependencies.md
+    - Fluxo de Dados: pt/architecture/data-flow.md
+    - Arquitetura de Segurança: pt/architecture/security.md
+    
+  - Plano de Implementação:
+    - pt/implementation/index.md
+    - Fases do Projeto: pt/implementation/phases.md
+    - Marcos & Entregas: pt/implementation/milestones.md
+    - Planejamento de Recursos: pt/implementation/resources.md
+    - Cronograma: pt/implementation/timeline.md
+    - Dependências: pt/implementation/dependencies.md
+
+  - Gestão de Riscos:
+    - pt/risk-management/index.md
+    - Registro de Riscos: pt/risk-management/register.md
+    - Avaliação de Riscos: pt/risk-management/assessment.md
+    - Estratégias de Mitigação: pt/risk-management/mitigation.md
+    - Planos de Contingência: pt/risk-management/contingency.md
+    - Monitoramento de Riscos: pt/risk-management/monitoring.md
+
+  - Gestão de Qualidade:
+    - pt/quality/index.md
+    - Padrões de Qualidade: pt/quality/standards.md
+    - Processos de Revisão: pt/quality/reviews.md
+    - Critérios de Aceitação: pt/quality/acceptance.md
+    - Estratégia de Testes: pt/quality/testing.md
+    - Garantia de Qualidade: pt/quality/assurance.md
+    
+  - Documentação do Usuário:
+    - pt/user-guide/index.md
+    - Guia de Instalação: pt/user-guide/installation.md
+    - Manual do Usuário: pt/user-guide/manual.md
+    - Configuração: pt/user-guide/configuration.md
+    - Solução de Problemas: pt/user-guide/troubleshooting.md
+    - FAQ: pt/user-guide/faq.md
+
+  - Documentação da API:
+    - pt/api/index.md
+    - Controladores Apex: pt/api/apex-controllers.md
+    - Componentes LWC: pt/api/lwc-components.md
+    - APIs de Integração: pt/api/integration.md
+    - Modelos de Dados: pt/api/data-models.md
+    - Exemplos de Código: pt/api/examples.md
+
+  - Detalhes Técnicos:
+    - pt/technical/index.md
+    - Análise de Código: pt/technical/code-analysis.md
+    - Documentação de Recursos: pt/technical/features.md
+    - Gestão de Estado: pt/technical/state-management.md
+    - Bibliotecas Externas: pt/technical/libraries.md
+    - Performance: pt/technical/performance.md
+    
+  - Gestão de Projeto:
+    - pt/project-management/index.md
+    - Processos PRINCE2: pt/project-management/prince2.md
+    - Gestão de Mudanças: pt/project-management/change.md
+    - Plano de Comunicação: pt/project-management/communication.md
+    - Stakeholder Management: project-management/stakeholders.md
+    - Lições Aprendidas: pt/project-management/lessons.md
+
+  - Apêndices:
+    - pt/appendices/index.md
+    - Glossário: pt/appendices/glossary.md
+    - Referências: pt/appendices/references.md
+    - Modelos: pt/appendices/templates.md
+    - Change Log: appendices/changelog.md
+
+# Extra CSS and JavaScript
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/prince2.css
+
+extra_javascript:
+  - javascripts/extra.js
+  - javascripts/mermaid.js

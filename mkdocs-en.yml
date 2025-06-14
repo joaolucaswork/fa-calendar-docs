@@ -1,0 +1,249 @@
+# CalendarioReino Project Documentation - English Version
+# MkDocs Material Configuration with PRINCE2 Standards
+
+site_name: CalendarioReino Project Documentation
+site_description: Comprehensive project documentation for the CalendarioReino Salesforce Lightning Web Component
+site_author: Project Team
+site_url: https://github.com/joaolucaswork/fa-calendar-docs/en
+
+# Repository
+repo_name: fa-calendar-docs
+repo_url: https://github.com/joaolucaswork/fa-calendar-docs
+edit_uri: edit/main/docs/en/
+
+# Copyright
+copyright: Copyright &copy; 2025 CalendarioReino Project Team
+
+# Configuration
+theme:
+  name: material
+  language: en
+  custom_dir: overrides
+  
+  # Theme features
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - header.autohide
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.integrate
+
+  # Color palette
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  # Fonts
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  # Icons
+  icon:
+    logo: material/calendar-clock
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+  - git-committers:
+      repository: joaolucaswork/fa-calendar-docs
+      branch: main
+  - tags:
+      tags_file: tags.md
+  - mermaid2
+
+# Customization
+extra:
+  status:
+    new: Recently added
+    deprecated: Deprecated
+    
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/joaolucaswork/fa-calendar-docs
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/company/your-company
+      
+  alternate:
+    - name: English
+      link: ./
+      lang: en
+    - name: Português
+      link: ../
+      lang: pt
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      title: On this page
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: your-username
+      repo: fa-calendar-docs
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - Home:
+    - en/index.md
+    - Project Charter: en/project-overview/charter.md
+    - Quick Start: en/getting-started/quick-start.md
+    
+  - Project Overview:
+    - en/project-overview/index.md
+    - Executive Summary: en/project-overview/executive-summary.md
+    - Project Objectives: en/project-overview/objectives.md
+    - Scope & Deliverables: en/project-overview/scope.md
+    - Success Criteria: en/project-overview/success-criteria.md
+    
+  - Business Case:
+    - en/business-case/index.md
+    - Business Justification: en/business-case/justification.md
+    - Benefits Analysis: en/business-case/benefits.md
+    - Cost-Benefit Analysis: en/business-case/cost-benefit.md
+    - Investment Appraisal: en/business-case/investment.md
+    - Business Impact: en/business-case/impact.md
+    
+  - Technical Architecture:
+    - en/architecture/index.md
+    - System Overview: en/architecture/overview.md
+    - Component Architecture: en/architecture/components.md
+    - Integration Points: en/architecture/integration.md
+    - External Dependencies: en/architecture/dependencies.md
+    - Data Flow: en/architecture/data-flow.md
+    - Security Architecture: en/architecture/security.md
+    
+  - Implementation Plan:
+    - en/implementation/index.md
+    - Project Phases: en/implementation/phases.md
+    - Milestones & Deliverables: en/implementation/milestones.md
+    - Resource Planning: en/implementation/resources.md
+    - Timeline: en/implementation/timeline.md
+    - Dependencies: en/implementation/dependencies.md
+    
+  - Risk Management:
+    - en/risk-management/index.md
+    - Risk Register: en/risk-management/register.md
+    - Risk Assessment: en/risk-management/assessment.md
+    - Mitigation Strategies: en/risk-management/mitigation.md
+    - Contingency Plans: en/risk-management/contingency.md
+    - Risk Monitoring: en/risk-management/monitoring.md
+    
+  - Quality Management:
+    - en/quality/index.md
+    - Quality Standards: en/quality/standards.md
+    - Review Processes: en/quality/reviews.md
+    - Acceptance Criteria: en/quality/acceptance.md
+    - Testing Strategy: en/quality/testing.md
+    - Quality Assurance: en/quality/assurance.md
+    
+  - User Documentation:
+    - en/user-guide/index.md
+    - Installation Guide: en/user-guide/installation.md
+    - User Manual: en/user-guide/manual.md
+    - Configuration: en/user-guide/configuration.md
+    - Troubleshooting: en/user-guide/troubleshooting.md
+    - FAQ: en/user-guide/faq.md
+    
+  - API Documentation:
+    - en/api/index.md
+    - Apex Controllers: en/api/apex-controllers.md
+    - LWC Components: en/api/lwc-components.md
+    - Integration APIs: en/api/integration.md
+    - Data Models: en/api/data-models.md
+    - Code Examples: en/api/examples.md
+    
+  - Technical Details:
+    - en/technical/index.md
+    - Code Analysis: en/technical/code-analysis.md
+    - Feature Documentation: en/technical/features.md
+    - State Management: en/technical/state-management.md
+    - External Libraries: en/technical/libraries.md
+    - Performance: en/technical/performance.md
+
+# Extra CSS and JavaScript
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/prince2.css
+
+extra_javascript:
+  - javascripts/extra.js
+  - javascripts/mermaid.js
+
+# Docs directory
+docs_dir: docs/en

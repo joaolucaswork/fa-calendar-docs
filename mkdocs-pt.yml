@@ -174,20 +174,47 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
-# Page tree - SAME FILES BUT PORTUGUESE NAVIGATION LABELS
+# Page tree - Comprehensive Portuguese content with Portuguese navigation labels
 nav:
-  - Início: index.md
-  - Início Rápido: getting-started/quick-start.md
+  - Início: pt/index.md
+  - Início Rápido: pt/getting-started/quick-start.md
   - Visão Geral do Projeto:
-    - project-overview/index.md
-    - Termo de Abertura: project-overview/charter.md
-  - Caso de Negócio: business-case/index.md
-  - Arquitetura: architecture/index.md
-  - Qualidade: quality/index.md
-  - Gestão de Riscos: risk-management/index.md
-  - Técnico: 
-    - technical/index.md
-    - Recursos: technical/features.md
+    - pt/project-overview/index.md
+    - Termo de Abertura: pt/project-overview/charter.md
+  - Caso de Negócio: pt/business-case/index.md
+  - Arquitetura: pt/architecture/index.md
+  - Implementação: pt/implementation/index.md
+  - Gestão de Riscos: pt/risk-management/index.md
+  - Qualidade: pt/quality/index.md
+  - Guia do Usuário:
+    - pt/user-guide/index.md
+    - Primeiros Passos: pt/user-guide/first-steps.md
+    - Instalação: pt/user-guide/installation.md
+    - Interface: pt/user-guide/interface.md
+    - Navegação: pt/user-guide/navigation.md
+    - Gestão de Eventos: pt/user-guide/event-management.md
+    - Reserva de Salas: pt/user-guide/room-booking.md
+    - Configuração de Salas: pt/user-guide/room-setup.md
+    - Configuração: pt/user-guide/configuration.md
+    - Personalização: pt/user-guide/customization.md
+    - Compartilhamento: pt/user-guide/sharing.md
+    - Manual do Usuário: pt/user-guide/manual.md
+    - Gestão de Usuários: pt/user-guide/user-management.md
+    - Backup: pt/user-guide/backup.md
+    - Manutenção: pt/user-guide/maintenance.md
+    - Atualizações: pt/user-guide/updates.md
+    - Monitoramento: pt/user-guide/monitoring.md
+    - Diagnósticos: pt/user-guide/diagnostics.md
+    - Solução de Problemas: pt/user-guide/troubleshooting.md
+    - Códigos de Erro: pt/user-guide/error-codes.md
+    - Treinamento: pt/user-guide/training.md
+    - Comunidade: pt/user-guide/community.md
+    - FAQ: pt/user-guide/faq.md
+    - Suporte: pt/user-guide/support.md
+  - Documentação da API: pt/api/index.md
+  - Técnico: pt/technical/index.md
+  - Apêndices:
+    - Glossário: pt/appendices/glossary.md
 
 # Extra CSS and JavaScript
 extra_css:

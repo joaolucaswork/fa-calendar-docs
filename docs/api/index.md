@@ -2,47 +2,50 @@
 
 ## CalendarioReino API Reference
 
-This section provides comprehensive API documentation for developers working with CalendarioReino. The API allows you to integrate CalendarioReino with external systems, automate workflows, and build custom applications.
+CalendarioReino exposes a comprehensive API through Apex controllers that provide programmatic access to all core system functionalities. This documentation provides detailed information about endpoints, methods, parameters, and usage examples for developers who need to integrate or extend the system.
 
-## Overview
+### API Architecture
 
-CalendarioReino provides both REST APIs and leverages Salesforce platform APIs for comprehensive integration capabilities.
+```mermaid
+graph TB
+    subgraph "Presentation Layer"
+        A[CalendarioReino LWC]
+        B[External Components]
+        C[Mobile Integrations]
+    end
+    
+    subgraph "API Layer"
+        D[CalendarioController]
+        E[AppointmentController]
+        F[EventUtils]
+        G[LeadEventController]
+    end
+    
+    subgraph "Data Layer"
+        H[Event Object]
+        I[Activity Object]
+        J[User Object]
+        K[Custom Objects]
+    end
+    
+    A --> D
+    B --> D
+    C --> E
+    D --> H
+    E --> I
+    F --> J
+    G --> K
+```
 
-### API Types
+### API Principles
 
-#### REST API
-- Event management
-- Calendar operations
-- Room booking
-- User management
-
-#### Platform Events
-- Real-time notifications
-- Event synchronization
-- Status updates
-- Integration events
-
-#### Apex API
-- Server-side customizations
-- Business logic extensions
-- Data validation
-- Custom workflows
-
-## Authentication
-
-### Salesforce OAuth
-CalendarioReino uses standard Salesforce OAuth 2.0 authentication:
-
-- Authorization endpoint
-- Token endpoint
-- Refresh token flow
-- Session management
-
-### API Access
-- Requires appropriate Salesforce licenses
-- Need specific permission sets
-- API limits apply
-- Monitoring available
+!!! info "API Design"
+    
+    **RESTful**: Follows REST principles for CRUD operations
+    **Secure**: Implements FLS, CRUD, and sharing checks
+    **Scalable**: Optimized for high-volume data operations
+    **Consistent**: Uniform response and error patterns
+    **Documented**: Comprehensive documentation with examples
 
 ## Core APIs
 

@@ -27,26 +27,53 @@ def run_command(command, cwd=None):
         print(f"Error output: {e.stderr}")
         sys.exit(1)
 
+def sync_assets_to_portuguese():
+    """Sync assets (CSS, JS, images, overrides) to Portuguese docs directory."""
+    print("🔄 Syncing assets to Portuguese directory...")
+    
+    base_dir = Path("docs")
+    pt_dir = Path("docs/pt")
+    
+    # Assets to sync
+    assets = ["images", "stylesheets", "javascripts", "overrides"]
+    
+    for asset in assets:
+        src = base_dir / asset
+        dest = pt_dir / asset
+        
+        if src.exists():
+            # Remove existing destination if it exists
+            if dest.exists():
+                shutil.rmtree(dest)
+            
+            # Copy the asset directory
+            shutil.copytree(src, dest)
+            print(f"  ✅ Synced {asset}")
+        else:
+            print(f"  ⚠️ Source {asset} not found")
+    
+    print("✅ Asset synchronization completed!")
+
 def build_portuguese():
-    """Build Portuguese version (default)."""
+    """Build Portuguese version with asset synchronization."""
     print("🇧🇷 Building Portuguese documentation...")
     
-    # Build with main mkdocs.yml (Portuguese)
-    run_command("mkdocs build --clean")
+    # Sync assets first
+    sync_assets_to_portuguese()
+    
+    # Build with Portuguese config
+    run_command("python -m mkdocs build --config-file mkdocs-pt.yml --site-dir site/pt --clean")
     
     print("✅ Portuguese documentation built successfully!")
 
 def build_english():
-    """Build English version."""
+    """Build English version to main site."""
     print("🇺🇸 Building English documentation...")
     
-    # Check if English config exists
-    if not os.path.exists("mkdocs-en.yml"):
-        print("❌ mkdocs-en.yml not found. Creating basic English config...")
-        create_english_config()
+    # Build English version to main site directory
+    run_command("python -m mkdocs build --clean")
     
-    # Build English version
-    run_command("mkdocs build --config-file mkdocs-en.yml --site-dir site/en")
+    print("✅ English documentation built successfully!")
     
     print("✅ English documentation built successfully!")
 
@@ -211,9 +238,9 @@ def deploy_to_github():
     """Deploy to GitHub Pages."""
     print("🚀 Deploying to GitHub Pages...")
     
-    # Build both versions
-    build_portuguese()
-    build_english()
+    # Build both versions in correct order
+    build_english()  # Main site
+    build_portuguese()  # /pt/ subdirectory
     
     # Deploy using mkdocs
     run_command("mkdocs gh-deploy --force")
@@ -234,17 +261,15 @@ def main():
     command = sys.argv[1].lower()
     
     if command == "build":
-        setup_english_docs()
-        build_portuguese()
+        # Build English first (to main site), then Portuguese (to /pt/)
         build_english()
+        build_portuguese()
         print("🎉 All documentation built successfully!")
         
     elif command == "serve":
-        setup_english_docs()
         serve_documentation()
         
     elif command == "deploy":
-        setup_english_docs()
         deploy_to_github()
         
     elif command == "setup":

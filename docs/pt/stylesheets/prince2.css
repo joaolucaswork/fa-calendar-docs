@@ -1,0 +1,435 @@
+/* PRINCE2 Methodology Specific Styles */
+
+/* PRINCE2 color scheme */
+:root {
+  --prince2-primary: #1e3a8a;
+  --prince2-secondary: #3b82f6;
+  --prince2-accent: #f59e0b;
+  --prince2-success: #10b981;
+  --prince2-warning: #f59e0b;
+  --prince2-danger: #ef4444;
+  --prince2-info: #06b6d4;
+  
+  /* PRINCE2 process colors */
+  --prince2-initiation: #8b5cf6;
+  --prince2-planning: #06b6d4;
+  --prince2-execution: #10b981;
+  --prince2-monitoring: #f59e0b;
+  --prince2-closure: #6b7280;
+}
+
+/* PRINCE2 Process indicators */
+.prince2-process {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin: 0.25rem;
+}
+
+.prince2-process.initiation {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--prince2-initiation);
+  border: 1px solid var(--prince2-initiation);
+}
+
+.prince2-process.planning {
+  background: rgba(6, 182, 212, 0.1);
+  color: var(--prince2-planning);
+  border: 1px solid var(--prince2-planning);
+}
+
+.prince2-process.execution {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--prince2-execution);
+  border: 1px solid var(--prince2-execution);
+}
+
+.prince2-process.monitoring {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--prince2-monitoring);
+  border: 1px solid var(--prince2-monitoring);
+}
+
+.prince2-process.closure {
+  background: rgba(107, 114, 128, 0.1);
+  color: var(--prince2-closure);
+  border: 1px solid var(--prince2-closure);
+}
+
+/* PRINCE2 Principles styling */
+.prince2-principles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.prince2-principle {
+  background: var(--md-default-bg-color);
+  border: 2px solid var(--prince2-primary);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.prince2-principle:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(30, 58, 138, 0.15);
+}
+
+.prince2-principle::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--prince2-primary), var(--prince2-secondary));
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.prince2-principle h4 {
+  color: var(--prince2-primary);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.prince2-principle .principle-number {
+  position: absolute;
+  top: -12px;
+  right: 1rem;
+  background: var(--prince2-primary);
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* PRINCE2 Themes styling */
+.prince2-themes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.prince2-theme {
+  background: linear-gradient(135deg, var(--prince2-secondary), var(--prince2-primary));
+  color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.prince2-theme:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(30, 58, 138, 0.3);
+}
+
+.prince2-theme h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.prince2-theme p {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+/* PRINCE2 Management Products */
+.management-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.management-product {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.management-product:hover {
+  border-color: var(--prince2-secondary);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.15);
+}
+
+.management-product .product-type {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: var(--prince2-accent);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.management-product h4 {
+  color: var(--prince2-primary);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.management-product .product-description {
+  font-size: 0.875rem;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 1rem;
+}
+
+.management-product .product-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.management-product .product-status.complete {
+  color: var(--prince2-success);
+}
+
+.management-product .product-status.in-progress {
+  color: var(--prince2-warning);
+}
+
+.management-product .product-status.pending {
+  color: var(--md-default-fg-color--light);
+}
+
+/* PRINCE2 Stage Gates */
+.stage-gates {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+  padding: 1rem;
+  background: linear-gradient(90deg, rgba(30, 58, 138, 0.05), rgba(59, 130, 246, 0.05));
+  border-radius: 0.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.stage-gates::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--prince2-primary), var(--prince2-secondary));
+}
+
+.stage-gate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+
+.stage-gate:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  background: var(--prince2-secondary);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.stage-gate .gate-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--prince2-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.stage-gate.completed .gate-icon {
+  background: var(--prince2-success);
+}
+
+.stage-gate.current .gate-icon {
+  background: var(--prince2-warning);
+  animation: pulse 2s infinite;
+}
+
+.stage-gate .gate-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--prince2-primary);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* PRINCE2 Risk Register styling */
+.risk-register {
+  margin: 2rem 0;
+}
+
+.risk-item {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.risk-item:hover {
+  border-color: var(--prince2-secondary);
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
+}
+
+.risk-header {
+  padding: 1rem;
+  background: rgba(30, 58, 138, 0.05);
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.risk-id {
+  font-weight: 600;
+  color: var(--prince2-primary);
+}
+
+.risk-score {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.risk-score.high {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--prince2-danger);
+}
+
+.risk-score.medium {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--prince2-warning);
+}
+
+.risk-score.low {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--prince2-success);
+}
+
+.risk-content {
+  padding: 1rem;
+}
+
+.risk-description {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.risk-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+.risk-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.risk-detail-label {
+  font-weight: 500;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.25rem;
+}
+
+.risk-detail-value {
+  color: var(--md-default-fg-color);
+}
+
+/* PRINCE2 Quality criteria */
+.quality-criteria {
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid var(--prince2-success);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.quality-criteria h4 {
+  color: var(--prince2-success);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.quality-criteria ul {
+  margin: 0;
+}
+
+.quality-criteria li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments for PRINCE2 elements */
+@media screen and (max-width: 768px) {
+  .prince2-principles,
+  .prince2-themes,
+  .management-products {
+    grid-template-columns: 1fr;
+  }
+  
+  .stage-gates {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .stage-gate:not(:last-child)::after {
+    display: none;
+  }
+  
+  .risk-details {
+    grid-template-columns: 1fr;
+  }
+}

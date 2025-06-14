@@ -1,0 +1,483 @@
+/* CalendarioReino Documentation Custom Styles */
+
+/* Root variables for consistent theming */
+:root {
+  --md-primary-fg-color: #3f51b5;
+  --md-primary-fg-color--light: #5c6bc0;
+  --md-primary-fg-color--dark: #303f9f;
+  --md-accent-fg-color: #ff4081;
+  --md-accent-fg-color--transparent: rgba(255, 64, 129, 0.1);
+  
+  /* Custom colors for project elements */
+  --calendarioReino-blue: #1976d2;
+  --calendarioReino-green: #4caf50;
+  --calendarioReino-orange: #ff9800;
+  --calendarioReino-red: #f44336;
+  --calendarioReino-purple: #9c27b0;
+  
+  /* Status colors */
+  --status-active: #4caf50;
+  --status-warning: #ff9800;
+  --status-error: #f44336;
+  --status-info: #2196f3;
+}
+
+/* Enhanced grid cards */
+.md-typeset .grid.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.md-typeset .grid.cards > * {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+  background: var(--md-default-bg-color);
+}
+
+.md-typeset .grid.cards > *:hover {
+  border-color: var(--md-primary-fg-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Status indicators */
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status-indicator.active {
+  background: rgba(76, 175, 80, 0.1);
+  color: var(--status-active);
+}
+
+.status-indicator.warning {
+  background: rgba(255, 152, 0, 0.1);
+  color: var(--status-warning);
+}
+
+.status-indicator.error {
+  background: rgba(244, 67, 54, 0.1);
+  color: var(--status-error);
+}
+
+.status-indicator.info {
+  background: rgba(33, 150, 243, 0.1);
+  color: var(--status-info);
+}
+
+/* Enhanced tables */
+.md-typeset table:not([class]) {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--md-primary-fg-color);
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  padding: 1rem;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset table:not([class]) tr:hover td {
+  background: var(--md-accent-fg-color--transparent);
+}
+
+/* Code blocks enhancement */
+.md-typeset .highlight {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.md-typeset .highlight .filename {
+  background: var(--md-code-bg-color);
+  color: var(--md-code-fg-color);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Mermaid diagram styling */
+.mermaid {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Custom admonitions */
+.md-typeset .admonition.prince2 {
+  border-color: var(--calendarioReino-purple);
+}
+
+.md-typeset .admonition.prince2 > .admonition-title {
+  background: rgba(156, 39, 176, 0.1);
+  border-color: var(--calendarioReino-purple);
+}
+
+.md-typeset .admonition.prince2 > .admonition-title::before {
+  background-color: var(--calendarioReino-purple);
+  mask-image: var(--md-admonition-icon--note);
+}
+
+.md-typeset .admonition.salesforce {
+  border-color: var(--calendarioReino-blue);
+}
+
+.md-typeset .admonition.salesforce > .admonition-title {
+  background: rgba(25, 118, 210, 0.1);
+  border-color: var(--calendarioReino-blue);
+}
+
+.md-typeset .admonition.salesforce > .admonition-title::before {
+  background-color: var(--calendarioReino-blue);
+  mask-image: var(--md-admonition-icon--info);
+}
+
+/* Progress indicators */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.progress-bar .progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--md-primary-fg-color), var(--md-accent-fg-color));
+  transition: width 0.3s ease;
+}
+
+/* Metrics cards */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.metric-card {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.metric-card:hover {
+  border-color: var(--md-primary-fg-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.metric-card .metric-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+  display: block;
+}
+
+.metric-card .metric-label {
+  font-size: 0.875rem;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.5rem;
+}
+
+/* Timeline styles */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--md-primary-fg-color);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.75rem;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--md-primary-fg-color);
+  border: 3px solid var(--md-default-bg-color);
+}
+
+.timeline-item.completed::before {
+  background: var(--status-active);
+}
+
+.timeline-item.in-progress::before {
+  background: var(--status-warning);
+}
+
+.timeline-item.pending::before {
+  background: var(--md-default-fg-color--light);
+}
+
+/* Architecture diagram enhancements */
+.architecture-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  background: var(--md-code-bg-color);
+}
+
+.architecture-section h4 {
+  margin-top: 0;
+  color: var(--md-primary-fg-color);
+}
+
+/* Risk matrix styling */
+.risk-matrix {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.risk-cell {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.risk-cell.low {
+  background: rgba(76, 175, 80, 0.1);
+  color: var(--status-active);
+}
+
+.risk-cell.medium {
+  background: rgba(255, 152, 0, 0.1);
+  color: var(--status-warning);
+}
+
+.risk-cell.high {
+  background: rgba(244, 67, 54, 0.1);
+  color: var(--status-error);
+}
+
+/* Reino Capital Custom Header and Tabs Styling */
+
+/* Dark Mode - Black header and tabs with shadows + Custom background */
+[data-md-color-scheme="slate"] {
+  /* Main background color */
+  --md-default-bg-color: #1F1F1F !important;
+  
+  /* Header styling */
+  .md-header {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+  }
+  
+  .md-header__inner {
+    background-color: transparent !important;
+  }
+  
+  .md-header__title,
+  .md-header__title .md-header__ellipsis,
+  .md-header__option,
+  .md-header__source {
+    color: #ffffff !important;
+  }
+  
+  /* Navigation tabs styling */
+  .md-tabs {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .md-tabs__list {
+    background-color: transparent !important;
+  }
+  
+  .md-tabs__item {
+    color: #ffffff !important;
+  }
+  
+  .md-tabs__link {
+    color: #ffffff !important;
+    opacity: 0.8;
+  }
+  
+  .md-tabs__link:hover,
+  .md-tabs__link--active {
+    color: #ffffff !important;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Main content background */
+  .md-main {
+    background-color: #1F1F1F !important;
+  }
+  
+  .md-content {
+    background-color: #1F1F1F !important;
+  }
+  
+  .md-sidebar {
+    background-color: #1F1F1F !important;
+  }
+}
+
+/* Light Mode - Dark header and tabs (same as dark mode) with normal background */
+[data-md-color-scheme="default"] {
+  /* Header styling - Dark header even in light mode */
+  .md-header {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+  }
+  
+  .md-header__inner {
+    background-color: transparent !important;
+  }
+  
+  .md-header__title,
+  .md-header__title .md-header__ellipsis,
+  .md-header__option,
+  .md-header__source {
+    color: #ffffff !important;
+  }
+  
+  /* Navigation tabs styling - Dark tabs in light mode */
+  .md-tabs {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .md-tabs__list {
+    background-color: transparent !important;
+  }
+  
+  .md-tabs__item {
+    color: #ffffff !important;
+  }
+  
+  .md-tabs__link {
+    color: #ffffff !important;
+    opacity: 0.9;
+  }
+  
+  .md-tabs__link:hover,
+  .md-tabs__link--active {
+    color: #ffffff !important;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* Search and other header elements */
+.md-header [data-md-component="search"] {
+  color: inherit;
+}
+
+.md-search__input {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.md-search__input::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Language switcher styling */
+.md-header__option label {
+  color: #ffffff !important;
+}
+
+/* Header buttons and icons */
+.md-header__button {
+  color: #ffffff !important;
+}
+
+.md-header__button:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Repository link styling */
+.md-source {
+  color: #ffffff !important;
+}
+
+.md-source:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .md-typeset .grid.cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .risk-matrix {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Print styles */
+@media print {
+  .md-header,
+  .md-sidebar,
+  .md-footer {
+    display: none !important;
+  }
+  
+  .md-main {
+    margin: 0 !important;
+  }
+  
+  .md-content {
+    margin: 0 !important;
+  }
+}

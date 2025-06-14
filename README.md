@@ -226,7 +226,7 @@ project-documentation/
 - **📖 Documentation**: Comprehensive guides available online
 - **🐛 Issues**: Report bugs via GitHub Issues
 - **💬 Discussions**: Join GitHub Discussions for questions
-- **📧 Contact**: Reach out to the project team
+- **📧 Contact**: Reach out to the Reino Capital
 
 ### Training and Resources
 
@@ -253,4 +253,4 @@ The CalendarioReino project follows Salesforce development best practices and li
 **Documentation Version**: 1.0.0  
 **Last Updated**: 2025-01-14  
 **Status**: ✅ Active Development  
-**Maintainer**: Project Team
+**Maintainer**: Reino Capital

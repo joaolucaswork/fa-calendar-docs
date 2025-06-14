@@ -1,10 +1,10 @@
-# CalendarioReino Project Documentation - English Version
+# CalendarioReino Project Documentation - Portuguese Version
 # MkDocs Material Configuration with PRINCE2 Standards
 
-site_name: CalendarioReino Project Documentation
-site_description: Comprehensive project documentation for the CalendarioReino Salesforce Lightning Web Component
-site_author: Reino Capital
-site_url: https://joaolucaswork.github.io/fa-calendar-docs
+site_name: Documentação do Projeto CalendarioReino
+site_description: Documentação abrangente do projeto para o Componente Lightning Web do CalendarioReino Salesforce
+site_author: Equipe do Projeto
+site_url: https://joaolucaswork.github.io/fa-calendar-docs/pt
 
 # Repository
 repo_name: fa-calendar-docs
@@ -12,13 +12,12 @@ repo_url: https://github.com/joaolucaswork/fa-calendar-docs
 edit_uri: edit/main/docs/
 
 # Copyright
-copyright: Copyright &copy; 2025 CalendarioReino Reino Capital
+copyright: Copyright &copy; 2025 Reino Capital
 
 # Configuration
 theme:
   name: material
-  language: en
-  custom_dir: overrides
+  language: pt
   
   # Theme features
   features:
@@ -77,6 +76,19 @@ theme:
     repo: fontawesome/brands/github
     edit: material/pencil
     view: material/eye
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
 
 # Plugins
 plugins:
@@ -87,12 +99,17 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       type: timeago
-  - git-committers:
-      repository: joaolucaswork/fa-calendar-docs
-      branch: main
-  - tags:
-      tags_file: tags.md
-  - mermaid2
+      enable_git_follow: false
+  # - git-committers:
+  #     repository: joaolucaswork/fa-calendar-docs
+  #     branch: main
+  - tags
+  - mermaid2:
+      arguments:
+        theme: |
+          ^(JSON.parse(__md_get("__palette").index == 1)) ?
+          'dark' : 'light'
+      javascript: https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js
 
 # Customization
 extra:
@@ -104,7 +121,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/joaolucaswork/fa-calendar-docs
     - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/company/your-company
+      link: https://br.linkedin.com/in/gabriel-tintori-276b93105
       
   alternate:
     - name: English
@@ -132,8 +149,8 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -142,7 +159,7 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.magiclink:
       repo_url_shorthand: true
-      user: your-username
+      user: joaolucaswork
       repo: fa-calendar-docs
   - pymdownx.mark
   - pymdownx.smartsymbols
@@ -157,30 +174,20 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
-# Page tree
+# Page tree - SAME FILES BUT PORTUGUESE NAVIGATION LABELS
 nav:
-  - Home: index.md
-  - Quick Start: getting-started/quick-start.md
-  - Project Overview:
+  - Início: index.md
+  - Início Rápido: getting-started/quick-start.md
+  - Visão Geral do Projeto:
     - project-overview/index.md
-    - Project Charter: project-overview/charter.md
-  - Business Case: business-case/index.md
-  - Architecture: architecture/index.md
-  - Quality: quality/index.md
-  - Risk Management: risk-management/index.md
-  - Technical: 
+    - Termo de Abertura: project-overview/charter.md
+  - Caso de Negócio: business-case/index.md
+  - Arquitetura: architecture/index.md
+  - Qualidade: quality/index.md
+  - Gestão de Riscos: risk-management/index.md
+  - Técnico: 
     - technical/index.md
-    - Features: technical/features.md
-    - Data Models: en/api/data-models.md
-    - Code Examples: en/api/examples.md
-    
-  - Technical Details:
-    - en/technical/index.md
-    - Code Analysis: en/technical/code-analysis.md
-    - Feature Documentation: en/technical/features.md
-    - State Management: en/technical/state-management.md
-    - External Libraries: en/technical/libraries.md
-    - Performance: en/technical/performance.md
+    - Recursos: technical/features.md
 
 # Extra CSS and JavaScript
 extra_css:
@@ -189,7 +196,3 @@ extra_css:
 
 extra_javascript:
   - javascripts/extra.js
-  - javascripts/mermaid.js
-
-# Docs directory
-docs_dir: docs/en

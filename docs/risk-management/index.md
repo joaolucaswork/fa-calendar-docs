@@ -275,7 +275,7 @@ graph LR
 
 !!! info "Risk Communication Plan"
     
-    **Daily**: Risk indicator monitoring by project team
+    **Daily**: Risk indicator monitoring by Reino Capital
     **Weekly**: Risk status updates to project manager
     **Monthly**: Risk dashboard to project board
     **Quarterly**: Comprehensive risk review with stakeholders

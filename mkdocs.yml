@@ -3,7 +3,7 @@
 
 site_name: CalendarioReino Project Documentation
 site_description: Comprehensive project documentation for the CalendarioReino Salesforce Lightning Web Component
-site_author: Project Team
+site_author: Reino Capital
 site_url: https://joaolucaswork.github.io/fa-calendar-docs
 
 # Repository
@@ -125,10 +125,10 @@ extra:
       
   alternate:
     - name: English
-      link: ./
+      link: /
       lang: en
     - name: Português
-      link: ./pt/
+      link: /pt/
       lang: pt
 
 # Extensions
@@ -176,64 +176,18 @@ markdown_extensions:
 
 # Page tree
 nav:
-  # English (Default) - Root Level Files
   - Home: index.md
-  - Getting Started: getting-started/quick-start.md
+  - Quick Start: getting-started/quick-start.md
   - Project Overview:
     - project-overview/index.md
     - Project Charter: project-overview/charter.md
   - Business Case: business-case/index.md
   - Architecture: architecture/index.md
-  - Quality Management: quality/index.md
+  - Quality: quality/index.md
   - Risk Management: risk-management/index.md
-  - Technical Details:
+  - Technical: 
     - technical/index.md
     - Features: technical/features.md
-  - User Guide:
-    - user-guide/index.md
-    - Configuration: user-guide/configuration.md
-  - API Documentation: api/index.md
-
-  # Portuguese Section
-  - Português:
-    - Início: pt/index.md
-    - Termo de Abertura: pt/project-overview/charter.md
-    - Início Rápido: pt/getting-started/quick-start.md
-    - Visão Geral do Projeto: pt/project-overview/index.md
-    - Caso de Negócio: pt/business-case/index.md
-    - Arquitetura Técnica: pt/architecture/index.md
-    - Plano de Implementação: pt/implementation/index.md
-    - Gestão de Riscos: pt/risk-management/index.md
-    - Gestão de Qualidade: pt/quality/index.md
-    - Documentação do Usuário: 
-      - pt/user-guide/index.md
-      - Primeiros Passos: pt/user-guide/first-steps.md
-      - Instalação: pt/user-guide/installation.md
-      - Interface: pt/user-guide/interface.md
-      - Navegação: pt/user-guide/navigation.md
-      - Gestão de Eventos: pt/user-guide/event-management.md
-      - Reserva de Salas: pt/user-guide/room-booking.md
-      - Configuração de Salas: pt/user-guide/room-setup.md
-      - Configuração: pt/user-guide/configuration.md
-      - Personalização: pt/user-guide/customization.md
-      - Compartilhamento: pt/user-guide/sharing.md
-      - Manual do Usuário: pt/user-guide/manual.md
-      - Gestão de Usuários: pt/user-guide/user-management.md
-      - Backup: pt/user-guide/backup.md
-      - Manutenção: pt/user-guide/maintenance.md
-      - Atualizações: pt/user-guide/updates.md
-      - Monitoramento: pt/user-guide/monitoring.md
-      - Diagnósticos: pt/user-guide/diagnostics.md
-      - Solução de Problemas: pt/user-guide/troubleshooting.md
-      - Códigos de Erro: pt/user-guide/error-codes.md
-      - Treinamento: pt/user-guide/training.md
-      - Comunidade: pt/user-guide/community.md
-      - FAQ: pt/user-guide/faq.md
-      - Suporte: pt/user-guide/support.md
-    - Documentação da API: pt/api/index.md
-    - Detalhes Técnicos: pt/technical/index.md
-    - Apêndices:
-      - Glossário: pt/appendices/glossary.md
 
 # Extra CSS and JavaScript
 extra_css:

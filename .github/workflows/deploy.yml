@@ -52,7 +52,11 @@ jobs:
         
     - name: Build documentation
       run: |
-        mkdocs build --verbose --clean --strict
+        # Build English version (default)
+        python -m mkdocs build --verbose --clean --strict
+        
+        # Build Portuguese version to /pt subdirectory
+        python -m mkdocs build --config-file mkdocs-pt.yml --site-dir site/pt --verbose --clean
         
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3

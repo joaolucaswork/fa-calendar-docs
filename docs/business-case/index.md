@@ -223,7 +223,7 @@ The CalendarioReino project presents a **compelling business opportunity** with:
 !!! success "Recommended Actions"
     
     1. **Approve Project Charter** - Authorize project initiation
-    2. **Allocate Resources** - Assign project team and budget
+    2. **Allocate Resources** - Assign Reino Capital and budget
     3. **Begin Planning Phase** - Detailed requirements and design
     4. **Establish Governance** - Project board and steering committee
 

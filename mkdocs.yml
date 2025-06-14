@@ -4,7 +4,7 @@
 site_name: CalendarioReino Project Documentation
 site_description: Comprehensive project documentation for the CalendarioReino Salesforce Lightning Web Component
 site_author: Project Team
-site_url: https://github.com/joaolucaswork/fa-calendar-docs
+site_url: https://joaolucaswork.github.io/fa-calendar-docs
 
 # Repository
 repo_name: fa-calendar-docs

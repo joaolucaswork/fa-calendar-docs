@@ -125,10 +125,10 @@ extra:
       
   alternate:
     - name: English
-      link: /
+      link: /fa-calendar-docs/
       lang: en
     - name: Português
-      link: /pt/
+      link: /fa-calendar-docs/pt/
       lang: pt
 
 # Extensions

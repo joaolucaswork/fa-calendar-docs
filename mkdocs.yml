@@ -18,6 +18,7 @@ copyright: Copyright &copy; 2025 Reino Capital
 theme:
   name: material
   language: en
+  custom_dir: docs/overrides
   
   # Theme features - Matching official MkDocs Material site
   features:
@@ -68,9 +69,11 @@ theme:
     text: Roboto
     code: Roboto Mono
 
+  # Favicon
+  favicon: images/favicon-reino.svg
+
   # Icons
   icon:
-    logo: material/calendar-clock
     repo: fontawesome/brands/github
     edit: material/pencil
     view: material/eye

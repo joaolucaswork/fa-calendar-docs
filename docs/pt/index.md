@@ -1,4 +1,4 @@
-# Documentação do Projeto CalendarioReino
+# Documentação do calendário da Reino Capital
 
 <div class="grid cards" markdown>
 

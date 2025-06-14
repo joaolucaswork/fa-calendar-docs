@@ -296,6 +296,160 @@
   color: var(--status-error);
 }
 
+/* Reino Capital Custom Header and Tabs Styling */
+
+/* Dark Mode - Black header and tabs with shadows + Custom background */
+[data-md-color-scheme="slate"] {
+  /* Main background color */
+  --md-default-bg-color: #1F1F1F !important;
+  
+  /* Header styling */
+  .md-header {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+  }
+  
+  .md-header__inner {
+    background-color: transparent !important;
+  }
+  
+  .md-header__title,
+  .md-header__title .md-header__ellipsis,
+  .md-header__option,
+  .md-header__source {
+    color: #ffffff !important;
+  }
+  
+  /* Navigation tabs styling */
+  .md-tabs {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .md-tabs__list {
+    background-color: transparent !important;
+  }
+  
+  .md-tabs__item {
+    color: #ffffff !important;
+  }
+  
+  .md-tabs__link {
+    color: #ffffff !important;
+    opacity: 0.8;
+  }
+  
+  .md-tabs__link:hover,
+  .md-tabs__link--active {
+    color: #ffffff !important;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Main content background */
+  .md-main {
+    background-color: #1F1F1F !important;
+  }
+  
+  .md-content {
+    background-color: #1F1F1F !important;
+  }
+  
+  .md-sidebar {
+    background-color: #1F1F1F !important;
+  }
+}
+
+/* Light Mode - Dark header and tabs (same as dark mode) with normal background */
+[data-md-color-scheme="default"] {
+  /* Header styling - Dark header even in light mode */
+  .md-header {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+  }
+  
+  .md-header__inner {
+    background-color: transparent !important;
+  }
+  
+  .md-header__title,
+  .md-header__title .md-header__ellipsis,
+  .md-header__option,
+  .md-header__source {
+    color: #ffffff !important;
+  }
+  
+  /* Navigation tabs styling - Dark tabs in light mode */
+  .md-tabs {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .md-tabs__list {
+    background-color: transparent !important;
+  }
+  
+  .md-tabs__item {
+    color: #ffffff !important;
+  }
+  
+  .md-tabs__link {
+    color: #ffffff !important;
+    opacity: 0.9;
+  }
+  
+  .md-tabs__link:hover,
+  .md-tabs__link--active {
+    color: #ffffff !important;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* Search and other header elements */
+.md-header [data-md-component="search"] {
+  color: inherit;
+}
+
+.md-search__input {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.md-search__input::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Language switcher styling */
+.md-header__option label {
+  color: #ffffff !important;
+}
+
+/* Header buttons and icons */
+.md-header__button {
+  color: #ffffff !important;
+}
+
+.md-header__button:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Repository link styling */
+.md-source {
+  color: #ffffff !important;
+}
+
+.md-source:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
   .md-typeset .grid.cards {

@@ -1,8 +1,8 @@
-# CalendarioReino Project Documentation - Portuguese Version
+# Documentação do calendário da Reino Capital - Portuguese Version
 # MkDocs Material Configuration with PRINCE2 Standards
 
-site_name: Documentação do Projeto CalendarioReino
-site_description: Documentação abrangente do projeto para o Componente Lightning Web do CalendarioReino Salesforce
+site_name: Documentação do calendário da Reino Capital
+site_description: Documentação completa do sistema de calendário da Reino Capital para Salesforce Lightning Web Components
 site_author: Equipe do Projeto
 site_url: https://joaolucaswork.github.io/fa-calendar-docs/pt
 
@@ -21,6 +21,7 @@ copyright: Copyright &copy; 2025 Reino Capital
 theme:
   name: material
   language: pt
+  custom_dir: docs/overrides
     # Theme features - Matching official MkDocs Material site
   features:
     - announce.dismiss
@@ -68,11 +69,11 @@ theme:
   # Fonts
   font:
     text: Roboto
-    code: Roboto Mono
+    code: Roboto Mono  # Favicon
+  favicon: images/favicon-reino.svg
 
   # Icons
   icon:
-    logo: material/calendar-clock
     repo: fontawesome/brands/github
     edit: material/pencil
     view: material/eye

@@ -21,8 +21,7 @@ copyright: Copyright &copy; 2025 Reino Capital
 theme:
   name: material
   language: pt
-  
-  # Theme features
+    # Theme features - Matching official MkDocs Material site
   features:
     - announce.dismiss
     - content.action.edit
@@ -31,14 +30,12 @@ theme:
     - content.code.copy
     - content.tabs.link
     - content.tooltips
-    - header.autohide
     - navigation.expand
     - navigation.footer
     - navigation.indexes
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
-    - navigation.path
     - navigation.sections
     - navigation.tabs
     - navigation.tabs.sticky

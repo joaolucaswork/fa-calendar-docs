@@ -11,7 +11,10 @@ Comprehensive project documentation for the **CalendarioReino** Salesforce Light
 
 ### View Documentation Online
 
-Visit the live documentation: **[https://github.com/joaolucaswork/fa-calendar-docs/](https://github.com/joaolucaswork/fa-calendar-docs/)**
+Visit the live documentation: **[https://joaolucaswork.github.io/fa-calendar-docs/](https://joaolucaswork.github.io/fa-calendar-docs/)**
+
+- **🇺🇸 English** (Default): [https://joaolucaswork.github.io/fa-calendar-docs/](https://joaolucaswork.github.io/fa-calendar-docs/)
+- **🇧🇷 Português**: [https://joaolucaswork.github.io/fa-calendar-docs/pt/](https://joaolucaswork.github.io/fa-calendar-docs/pt/)
 
 ### Local Development
 
@@ -108,46 +111,101 @@ This documentation follows **PRINCE2 Project Initiation Documentation (PID)** st
 - **[User Manual](docs/user-guide/manual.md)**: Comprehensive feature guide
 - **[Troubleshooting](docs/user-guide/troubleshooting.md)**: Common issues and solutions
 
-## 🌐 Language Support
+## � Style and Design
 
-This documentation is available in multiple languages:
+This documentation site is styled to **match the official MkDocs Material site** for a consistent, professional experience:
 
-- **🇧🇷 Português**: Documentação principal em português brasileiro
-- **🇺🇸 English**: Primary documentation in English
+### Header and Navigation Features
+
+- **Sticky Navigation Tabs**: Navigation tabs remain visible when scrolling
+- **Instant Loading**: Fast page transitions without full page reloads  
+- **Progress Indicators**: Loading progress bar for slower connections
+- **Navigation Expansion**: Collapsible sidebar sections for easy browsing
+- **Anchor Tracking**: URL updates automatically as you scroll through sections
+- **Back-to-Top Button**: Quick return to page top
+- **Search Integration**: Advanced search with highlighting and suggestions
+
+### Theme Configuration
+
+- **Material Design**: Clean, modern interface following Google's Material Design
+- **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
+- **Light/Dark Themes**: Automatic theme switching with user preference
+- **Professional Typography**: Roboto font family for optimal readability
+- **Icon Integration**: Comprehensive Material Design icon set
+
+### Performance Optimizations
+
+- **Minified HTML/CSS**: Compressed output for faster loading
+- **Instant Prefetching**: Pages preload on hover for immediate navigation
+- **Optimized Images**: Proper sizing and format optimization
+- **Service Worker Ready**: PWA-compatible for offline access
+
+## �🌐 Language Support
+
+This documentation is available in multiple languages with **English as the default**:
+
+- **�🇸 English** (Default): Complete documentation at root level
+- **�🇧🇷 Português** (Secondary): Full Portuguese translation available
+
+### Language Switching
+
+The documentation includes a language switcher in the top navigation that allows seamless switching between:
+- **English**: All content in English at `/fa-calendar-docs/`
+- **Portuguese**: All content in Portuguese at `/fa-calendar-docs/pt/`
 
 ### Building Multi-language Documentation
 
 ```bash
-# Build both language versions
-python build-multilang.py build
+# Build English version (default)
+mkdocs build --clean
 
-# Serve for development (both languages)
-python build-multilang.py serve
+# Build Portuguese version to /pt subdirectory  
+mkdocs build --config-file mkdocs-pt.yml --site-dir site/pt --clean
 
-# Deploy to GitHub Pages
-python build-multilang.py deploy
+# Build both versions (deployment process)
+mkdocs build --clean && mkdocs build --config-file mkdocs-pt.yml --site-dir site/pt
 
-# Setup English documentation structure
-python build-multilang.py setup
+# Serve English for development
+mkdocs serve
+
+# Serve Portuguese for development
+mkdocs serve --config-file mkdocs-pt.yml
 ```
 
 ### Documentation Structure
 
+The multilingual setup uses a hybrid approach optimized for GitHub Pages:
+
 ```
 docs/
-├── index.md                    # Portuguese (default)
-├── getting-started/           # Portuguese content
-├── project-overview/          # Portuguese content
-├── business-case/            # Portuguese content
-├── architecture/             # Portuguese content
-├── pt/                       # Portuguese mirror (optional)
-│   └── index.md
-└── en/                       # English version
-    ├── index.md
-    ├── getting-started/
-    ├── project-overview/
-    └── ...
+├── index.md                   # English (Default - Root)
+├── getting-started/           # English content
+├── user-guide/               # English content  
+├── architecture/             # English content
+├── business-case/            # English content
+├── project-overview/         # English content
+├── quality/                  # English content
+├── risk-management/          # English content
+├── technical/                # English content
+├── api/                      # English content
+└── pt/                       # Portuguese (Secondary Language)
+    ├── index.md              # Portuguese homepage
+    ├── getting-started/      # Portuguese content
+    ├── user-guide/           # Portuguese content
+    ├── architecture/         # Portuguese content
+    ├── business-case/        # Portuguese content
+    ├── project-overview/     # Portuguese content
+    ├── quality/              # Portuguese content
+    ├── risk-management/      # Portuguese content
+    ├── technical/            # Portuguese content
+    ├── api/                  # Portuguese content
+    └── appendices/           # Portuguese content
 ```
+
+### Configuration Files
+
+- **`mkdocs.yml`**: English configuration (default site)
+- **`mkdocs-pt.yml`**: Portuguese configuration (uses `docs_dir: docs/pt`)
 
 ## 🔧 Development
 
@@ -157,15 +215,28 @@ docs/
 # Install dependencies
 pip install -r requirements.txt
 
-# Build documentation
+# Build English documentation
 mkdocs build
 
-# Serve with live reload
+# Build Portuguese documentation  
+mkdocs build --config-file mkdocs-pt.yml --site-dir site/pt
+
+# Serve English with live reload
 mkdocs serve
 
-# Deploy to GitHub Pages
-mkdocs gh-deploy
+# Serve Portuguese with live reload
+mkdocs serve --config-file mkdocs-pt.yml
 ```
+
+### Deployment
+
+Deployment is **fully automated** via GitHub Actions:
+
+1. **Push to main branch** - Triggers automatic deployment
+2. **GitHub Actions** builds both English and Portuguese versions
+3. **GitHub Pages** serves the multilingual site automatically
+
+**Live Site**: [https://joaolucaswork.github.io/fa-calendar-docs/](https://joaolucaswork.github.io/fa-calendar-docs/)
 
 ### Project Structure
 
@@ -250,7 +321,14 @@ The CalendarioReino project follows Salesforce development best practices and li
 
 ---
 
-**Documentation Version**: 1.0.0  
-**Last Updated**: 2025-01-14  
-**Status**: ✅ Active Development  
+**Documentation Version**: 2.0.0  
+**Last Updated**: 2025-06-14  
+**Status**: ✅ Production Ready - Multilingual Setup Complete  
 **Maintainer**: Reino Capital
+
+**🎉 Recent Updates**: 
+- ✅ Complete multilingual documentation (English/Portuguese)
+- ✅ English as default language at root  
+- ✅ Automated GitHub Actions deployment
+- ✅ Language switcher working correctly
+- ✅ All navigation links resolved

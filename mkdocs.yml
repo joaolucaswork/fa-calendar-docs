@@ -19,7 +19,7 @@ theme:
   name: material
   language: en
   
-  # Theme features
+  # Theme features - Matching official MkDocs Material site
   features:
     - announce.dismiss
     - content.action.edit
@@ -28,14 +28,12 @@ theme:
     - content.code.copy
     - content.tabs.link
     - content.tooltips
-    - header.autohide
     - navigation.expand
     - navigation.footer
     - navigation.indexes
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
-    - navigation.path
     - navigation.sections
     - navigation.tabs
     - navigation.tabs.sticky
@@ -190,25 +188,11 @@ nav:
     - Configuration: user-guide/configuration.md
     - First Steps: user-guide/first-steps.md
     - Installation: user-guide/installation.md
-    - Interface: pt/user-guide/interface.md
-    - Navigation: pt/user-guide/navigation.md
-    - Event Management: pt/user-guide/event-management.md
-    - Room Booking: pt/user-guide/room-booking.md
-    - Room Setup: pt/user-guide/room-setup.md
-    - Customization: pt/user-guide/customization.md
-    - Sharing: pt/user-guide/sharing.md
     - User Manual: user-guide/manual.md
-    - User Management: pt/user-guide/user-management.md
-    - Backup: pt/user-guide/backup.md
-    - Maintenance: pt/user-guide/maintenance.md
-    - Updates: pt/user-guide/updates.md
-    - Monitoring: pt/user-guide/monitoring.md
-    - Diagnostics: pt/user-guide/diagnostics.md
-    - Troubleshooting: user-guide/troubleshooting.md
-    - Error Codes: pt/user-guide/error-codes.md
     - Training: user-guide/training.md
     - Community: user-guide/community.md
     - FAQ: user-guide/faq.md
+    - Troubleshooting: user-guide/troubleshooting.md
     - Support: user-guide/support.md
   - API Documentation: api/index.md
   - Technical: 
